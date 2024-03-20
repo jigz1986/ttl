@@ -8,10 +8,7 @@ TTL
 const date = new Date();
 var h = 18 - date.getHours();
 var m = 60 - date.getMinutes();
-window.setInterval(function() { 
-    document.getElementById("time").innerHTML = h +" "+m;
-console.log(h +" "+ m);}, 1000 * 1000);
-}
+window.setInterval(function() {     document.getElementById("time").innerHTML = h +" "+m;console.log(h +" "+ m);}, 1000 * 1000);
 </script>
 
 </body>
