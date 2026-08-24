@@ -39,8 +39,9 @@
     <script>
         const date = new Date();
         var h = 17 - date.getHours();
-        var m = 61 - date.getMinutes();
-        document.getElementById("time").innerHTML = h +" : "+m;
+        var m = 60 - date.getMinutes();
+        var s = 60 - dat.getSeconds();
+        document.getElementById("time").innerHTML = h +" : "+m" : "+s;
     </script>
 
 </body>
