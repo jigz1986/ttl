@@ -37,11 +37,15 @@
 <body>
     <div id="time"></div>
     <script>
+        function fetchData() {
         const date = new Date();
         var h = 17 - date.getHours();
         var m = 60 - date.getMinutes();
         var s = 60 - date.getSeconds();
-        document.getElementById("time").innerHTML = h +" : "+m+" : "+s;
+        document.getElementById("time").innerHTML = h +" : "+m+" : "+s; }
+
+        fetchData(); 
+const intervalId = setInterval(fetchData, 1000);
     </script>
 
 </body>
