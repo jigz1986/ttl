@@ -7,23 +7,24 @@
     <title>TTL</title>
     <style>
         html 
-        {display: inline-flex;
-        width: 99vw;	  height: 98vh;
-         align-items: center;
-         justify-content: center;
-         text-align: center;
-         font-size: 200px; 
-         color: white;
+        {
+		color:#ddd;
         font-family: "Orbitron", sans-serif;
-        font-weight: 400;
-          font-style: normal;
+display:inline-flex;
+justify-content:center;
+align-items:center;
+height:99%;		}
+		
+	#time{
+        position: fixed;
+		right: 0px;
+		bottom: 0px;
+
         } 
         
-        div:hover	
-        {    opacity: 0;
-        	transition: opacity .8s linear; 
-            color: black;   
-        }
+		#404{
+		display:inline-flex;}
+     
 
         @media (max-width: 1000px)  {
         div {
@@ -35,6 +36,7 @@
 </head>
 
 <body>
+<div id="404"><image src="https://blog.openreplay.com/images/a-guide-to-404-error-pages/images/image1.png"></img>
     <div id="time"></div>
     <script>
         function fetchData() {
@@ -45,7 +47,7 @@
         document.getElementById("time").innerHTML = h +" : "+m+" : "+s; }
 
         fetchData(); 
-const intervalId = setInterval(fetchData, 1000);
+const intervalId = setInterval(fetchData,1000);
     </script>
 
 </body>
