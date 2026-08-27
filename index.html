@@ -17,13 +17,13 @@ height:99%;		}
 		
 	#time{
         position: fixed;
-		right: 0px;
+		right: 30px;
 		bottom: 0px;
 
         } 
         
-		#404{
-		display:inline-flex;}
+		#time :hover
+		{color:black;}
      
 
         @media (max-width: 1000px)  {
@@ -31,21 +31,25 @@ height:99%;		}
             color: black;
         font-size: 10vw;}
         }
+		
+		span {    display: inline-flex;
+		width:30px;}
     </style>
 
 </head>
 
 <body>
 <div id="404"><image src="https://blog.openreplay.com/images/a-guide-to-404-error-pages/images/image1.png"></img>
-    <div id="time"></div>
+    <div id="time"> <span id="th"></span> : <span id="tm"> </span> : <span id="ts"></span> </div>
     <script>
         function fetchData() {
         const date = new Date();
         var h = 17 - date.getHours();
         var m = 60 - date.getMinutes();
         var s = 60 - date.getSeconds();
-        document.getElementById("time").innerHTML = h +" : "+m+" : "+s; }
-
+        document.getElementById("th").innerHTML = h; 
+		document.getElementById("tm").innerHTML = m;
+		document.getElementById("ts").innerHTML = s;}
         fetchData(); 
 const intervalId = setInterval(fetchData,1000);
     </script>
